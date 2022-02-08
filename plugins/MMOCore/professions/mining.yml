@@ -1,0 +1,53 @@
+
+# Display options
+name: Mining
+
+# Experience given to the main level
+# when leveling up this profession
+experience:
+    base: 13
+    per-level: 3
+
+# Must match an existing exp curve filename from the 'expcurves' folder
+exp-curve: levels
+
+exp-sources:
+- 'mineblock{type=STONE;amount=1-2;player-placed=false}'
+- 'mineblock{type=GRANITE;amount=1-2;player-placed=false}'
+- 'mineblock{type=DIORITE;amount=1-2;player-placed=false}'
+- 'mineblock{type=ANDESITE;amount=1-2;player-placed=false}'
+- 'mineblock{type=COBBLESTONE;amount=1;player-placed=false}'
+- 'mineblock{type=SAND;amount=1;player-placed=false}'
+- 'mineblock{type=RED_SAND;amount=1;player-placed=false}'
+- 'mineblock{type=GRAVEL;amount=1;player-placed=false}'
+- 'mineblock{type=GOLD_ORE;amount=4-5;player-placed=false}'
+- 'mineblock{type=IRON_ORE;amount=3-4;player-placed=false}'
+- 'mineblock{type=COAL_ORE;amount=2-3;player-placed=false}'
+- 'mineblock{type=LAPIS_ORE;amount=3-4;player-placed=false}'
+- 'mineblock{type=SANDSTONE;amount=1-2;player-placed=false}'
+- 'mineblock{type=OBSIDIAN;amount=8-10;player-placed=false}'
+- 'mineblock{type=PURPUR_BLOCK;amount=1-2;player-placed=false}'
+- 'mineblock{type=DIAMOND_ORE;amount=6-8;player-placed=false}'
+- 'mineblock{type=REDSTONE_ORE;amount=3-4;player-placed=false}'
+- 'mineblock{type=CLAY;amount=1;player-placed=false}'
+- 'mineblock{type=NETHERRACK;amount=1;player-placed=false}'
+- 'mineblock{type=SOUL_SAND;amount=1;player-placed=false}'
+- 'mineblock{type=NETHERBRICK;amount=1-2;player-placed=false}'
+- 'mineblock{type=EMERALD_ORE;amount=4-5;player-placed=false}'
+- 'mineblock{type=PRISMARINE;amount=1-2;player-placed=false}'
+- 'mineblock{type=PRISMARINE_BRICKS;amount=1-2;player-placed=false}'
+- 'mineblock{type=DARK_PRISMARINE;amount=1-2;player-placed=false}'
+- 'mineblock{type=RED_SANDSTONE;amount=1-2;player-placed=false}'
+- 'mineblock{type=RED_NETHER_BRICKS;amount=1-2;player-placed=false}'
+- 'mineblock{type=NETHER_GOLD_ORE;amount=4-5;player-placed=false}'
+- 'mineblock{type=BASALT;amount=1-2;player-placed=false}'
+- 'mineblock{type=LODESTONE;amount=1-2;player-placed=false}'
+- 'mineblock{type=ANCIENT_DEBRIS;amount=6-8;player-placed=false}'
+- 'mineblock{type=CRYING_OBSIDIAN;amount=8-10;player-placed=false}'
+- 'mineblock{type=BLACKSTONE;amount=1-2;player-placed=false}'
+- 'mineblock{type=GILDED_BLACKSTONE;amount=3-4;player-placed=false}'
+- 'mineblock{type=AMETHYST_BLOCK;amount=3-4;player-placed=false}'
+- 'mineblock{type=DEEPSLATE;amount=2-3;player-placed=false}'
+
+
+

@@ -1,0 +1,36 @@
+
+# Display options
+name: Woodcutting
+
+# Experience given to the main level
+# when leveling up this profession
+experience:
+    base: 13
+    per-level: 3
+
+# Must match an existing exp curve filename from the 'expcurves' folder
+exp-curve: levels
+
+exp-sources:
+- 'mineblock{type=OAK_LOG;amount=2-3;player-placed=false}'
+- 'mineblock{type=SPRUCE_LOG;amount=2-3;player-placed=false}'
+- 'mineblock{type=BIRCH_LOG;amount=2-3;player-placed=false}'
+- 'mineblock{type=JUNGLE_LOG;amount=2-3;player-placed=false}'
+- 'mineblock{type=ACACIA_LOG;amount=2-3;player-placed=false}'
+- 'mineblock{type=BIRCH_LOG;amount=2-3;player-placed=false}'
+- 'mineblock{type=DARK_OAK_LOG;amount=2-3;player-placed=false}'
+- 'mineblock{type=STRIPPED_OAK_LOG;amount=1-2;player-placed=false}'
+- 'mineblock{type=STRIPPED_SPRUCE_LOG;amount=1-2;player-placed=false}'
+- 'mineblock{type=STRIPPED_BIRCH_LOG;amount=1-2;player-placed=false}'
+- 'mineblock{type=STRIPPED_JUNGLE_LOG;amount=1-2;player-placed=false}'
+- 'mineblock{type=STRIPPED_ACACIA_LOG;amount=1-2;player-placed=false}'
+- 'mineblock{type=STRIPPED_BIRCH_LOG;amount=1-2;player-placed=false}'
+- 'mineblock{type=STRIPPED_DARK_OAK_LOG;amount=1-2;player-placed=false}'
+- 'mineblock{type=OAK_PLANKS;amount=1;player-placed=false}'
+- 'mineblock{type=SPRUCE_PLANKS;amount=1;player-placed=false}'
+- 'mineblock{type=BIRCH_PLANKS;amount=1;player-placed=false}'
+- 'mineblock{type=JUNGLE_PLANKS;amount=1;player-placed=false}'
+- 'mineblock{type=ACACIA_PLANKS;amount=1;player-placed=false}'
+- 'mineblock{type=BIRCH_PLANKS;amount=1;player-placed=false}'
+- 'mineblock{type=DARK_OAK_PLANK;amount=1;player-placed=false}'
+
