@@ -1,0 +1,108 @@
+# WELCOME TO THE OFFICIAL SLEEP-MOST PLUGIN
+# AUTHORS: MrGeneralQ, HorrendousEntity
+# CONTRIBUTORS: Nozemi
+# VERSION: 4.13.2
+# SUPPORT NEEDED? Join our discord at --> https://discord.pseudonova.com/ WE ARE HAPPY TO HELP YOU FURTHER!
+# YOU CAN FIND THE DOCS FOR THIS PLUGIN HERE --> https://mrgeneralq.gitbook.io/sleepmost/
+
+
+# WARNING: SUPPORT IS ONLY GIVEN TO THE LATEST VERSION
+update-checker-enabled: true
+
+sleep:
+  # for each world, you can create different configurations
+  world:
+    enabled: true
+    calculation-method: players
+    percentage-required: 0.1
+    players-required: 1
+    mob-no-target: true
+    use-exempt: false
+    use-afk: true
+    use-bossbar: false
+    use-sound-night-skipped: false
+    use-sound-storm-skipped: false
+    use-title-night-skipped: false
+    use-title-storm-skipped: false
+    exempt-creative: false
+    exempt-spectator: false
+    prevent-sleep: false
+    prevent-phantom: false
+    nightcycle-animation: true
+    storm-sleep: true
+    skip-delay: 0
+    heal: false
+    feed: false
+    clock-animation: false
+    skip-storm: true
+    allow-sleep-cmd: true
+    exempt-below-y: -1
+    non-sleeping-sound: false
+    non-sleeping-title: false
+    non-sleeping-clock-animation: false
+    exempt-flying: false
+  
+  world2:
+    enabled: false
+    calculation-method: percentage
+    percentage-required: 0.5
+    players-required: 5
+    mob-no-target: true
+    use-exempt: false
+    use-afk: false
+    use-bossbar: false
+    use-sound-night-skipped: false
+    use-sound-storm-skipped: false
+    use-title-night-skipped: false
+    use-title-storm-skipped: false
+    exempt-creative: false
+    exempt-spectator: false
+    prevent-sleep: false
+    prevent-phantom: false
+    nightcycle-animation: false
+    storm-sleep: true
+    skip-delay: 0
+    heal: false
+    feed: false
+
+titles:
+  night-skipped:
+    title: '&a Someone is sleeping the night away...'
+    subtitle: '&bGood morning sunshine!'
+  storm-skipped:
+    title: '&e Someone is sleeping a storm away...'
+    subtitle: '&Good morning sunshine!'
+
+
+# Add sound effects after skipping the night or storm
+sounds:
+  night-skipped:
+    sound: UI_TOAST_CHALLENGE_COMPLETE
+  storm-skipped:
+    sound: ENTITY_WITHER_SPAWN
+
+
+# specify the time which the world will be set after reset
+time-after-reset: 0
+
+messages:
+  prefix: '&7[&bSleep-Most&7]'
+  
+  # time in seconds for message cooldown when a player goes to sleep
+  # default 10 seconds
+  cooldown: 10
+  
+  # message when the night got skipped
+  night-skipped: '&bThe night was skipped!'
+  
+  # message when the storm got skipped
+  storm-skipped: '&bThe storm was skipped!'
+  
+  # message format to show how many players are required to sleep
+  players-left-night: '&bSleeping to skip night &f[&c%sleeping%/%required%&f]&b!'
+  players-left-storm: '&bSleeping to skip the storm &f[&c%sleeping%/%required%&f]&b!'
+  sleep-prevented: '&cYou cannot sleep in this world!'
+  no-sleep-storm: '&cYou cannot sleep during a thunderstorm'
+
+bossbar:
+  title: '&bPlayers sleeping to skip the %skip-cause% &f[&c%sleeping-count%&f/&c%sleeping-required-count%&f]'

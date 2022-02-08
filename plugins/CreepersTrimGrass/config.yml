@@ -1,0 +1,144 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#   _____                                _______   _            _____                     #
+#  / ____|                              |__   __| (_)          / ____|                    #
+# | |     _ __ ___  ___ _ __   ___ _ __ ___| |_ __ _ _ __ ___ | |  __ _ __ __ _ ___ ___   #
+# | |    | '__/ _ \/ _ \ '_ \ / _ \ '__/ __| | '__| | '_ ` _ \| | |_ | '__/ _` / __/ __|  #
+# | |____| | |  __/  __/ |_) |  __/ |  \__ \ | |  | | | | | | | |__| | | | (_| \__ \__ \  #
+#  \_____|_|  \___|\___| .__/ \___|_|  |___/_|_|  |_|_| |_| |_|\_____|_|  \__,_|___/___/  #
+#                      | |                                                                #
+#                      |_|                                                     by JustEli #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Disable entities that aren't mobs--like item frames and armor stands--to take damage of
+#   explosions from creepers. So, disable damage done by creeper explosions to those.
+disableDamageToNonMobs: true
+
+# Set values down here to what you want the global default to be for the section
+#   'creeperTransformBlocks'. You can change the value per block, but these will be the
+#   default, and are able to be overridden by adding it to the block section you don't
+#   want the default value to count for.
+defaultValues:
+  # Enable creeper block modification under sea level only, which is below Y-level 64.
+  #   If 'false', it will also take effect above the ground. That's usually fine.
+  underSeaLevelOnly: false
+  # Disable creeper block modification in GriefPrevention claims. Note that, down the
+  #   config, it will be overridden for some blocks where it is set to 'true'.
+  disableInClaims: false
+  # Disable creeper block transformations by creeper explosions in WorldGuard regions.
+  #   Admin claims of GriefPrevention also count as regions.
+  disableInRegions: true
+
+# Blocks that should be affected (transformed) by creeper explosions are defined down here.
+#   For example:
+#   - STONE:      is a block, so this is triggered when a stone block explodes
+#   - TRIMMABLE:  is not a block, so its block-list is defined down the config
+# All allowed materials: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+#   If an invalid Material is used, its block-list must be defined at 'blockDefinitions'.
+creeperTransformBlocks:
+  # Not a Material ('TRIMMABLE'), so its blocks are defined at 'blockDefinitions' down
+  #   the config. In this case, it's: GRASS_BLOCK and MYCELIUM. What to do with these
+  #   blocks when a creeper explosion effects these blocks?
+  TRIMMABLE:
+    # Convert the affected blocks (in this case GRASS_BLOCK and MYCELIUM) into ...
+    conversion:
+      # The affected block by the explosion will be converted to ...
+      COARSE_DIRT: 0.08   # 8% coarse dirt (can use a hoe in-game to make it dirt!)
+      DIRT: 0.92          # and 92% dirt
+  # This is a Material (STONE), so it is not defined down the config.
+  STONE:
+    # This value was already defined at 'defaultValues', and default set to 'false', but we
+    # want to override it for this block and only have it under sea level for STONE.
+    underSeaLevelOnly: true
+    conversion:
+      INFESTED_COBBLESTONE: 0.01
+      COBBLESTONE: 0.99
+  SNOW:
+    conversion:
+      # All snow layers will be broken (particle effects play) and set to AIR.
+      AIR: 1.00
+  GRASSES:
+    conversion:
+      AIR: 1.00
+  LEAVES:
+    # Override this value from its default (false), and set it to not break leaves by
+    #   creeper explosions in GriefPrevention claims.
+    disableInClaims: true
+    conversion:
+      AIR: 1.00
+  FLOWERS:
+    disableInClaims: true
+    conversion:
+      AIR: 1.00
+  GLASS_PANES:
+    disableInClaims: true
+    conversion:
+      # The exploded block will be converted to 20% air and 80% stay intact.
+      AIR: 0.20
+
+# The definitions for non-existing blocks used above: like LEAVES, GRASSES, FLOWERS.
+blockDefinitions:
+  TRIMMABLE:
+    - GRASS_BLOCK
+    - MYCELIUM
+  LEAVES:
+    - OAK_LEAVES
+    - SPRUCE_LEAVES
+    - BRICH_LEAVES
+    - JUNGLE_LEAVES
+    - ACACIA_LEAVES
+    - DARK_OAK_LEAVES
+  GRASSES:
+    - GRASS
+    - FERN
+    - LARGE_FERN
+    - TALL_GRASS
+    - DEAD_BUSH
+  FLOWERS:
+    - DANDELLION
+    - POPPY
+    - BLUE_ORCHID
+    - ALLIUM
+    - AZURE_BLUET
+    - RED_TULIP
+    - WHITE_TULIP
+    - ORANGE_TULIP
+    - PINK_TULIP
+    - OXEYE_DAISY
+    - CORNFLOWER
+    - LILY_OF_THE_VALLEY
+    - SUNFLOWER
+    - LILAC
+    - ROSE_BUSH
+    - PEONY
+    - OAK_SAPLING
+    - SPRUCE_SAPLING
+    - BRICH_SAPLING
+    - JUNGLE_SAPLING
+    - ACACIA_SAPLING
+    - DARK_OAK_SAPLING
+    - BROWN_MUSHROOM
+    - RED_MUSHROOM
+    - POTATOES
+    - WHEAT
+    - CARROTS
+    - MELON_STEM
+    - PUMPKIN_STEM
+    - BEETROOTS
+  GLASS_PANES:
+    - GLASS_PANE
+    - WHITE_STAINED_GLASS_PANE
+    - ORANGE_STAINED_GLASS_PANE
+    - MAGENTA_STAINED_GLASS_PANE
+    - LIGHT_BLUE_STAINED_GLASS_PANE
+    - YELLOW_STAINED_GLASS_PANE
+    - LIME_STAINED_GLASS_PANE
+    - PINK_STAINED_GLASS_PANE
+    - GRAY_STAINED_GLASS_PANE
+    - LIGHT_GRAY_STAINED_GLASS_PANE
+    - CYAN_STAINED_GLASS_PANE
+    - PURPLE_STAINED_GLASS_PANE
+    - BLUE_STAINED_GLASS_PANE
+    - BROWN_STAINED_GLASS_PANE
+    - GREEN_STAINED_GLASS_PANE
+    - RED_STAINED_GLASS_PANE
+    - BLACK_STAINED_GLASS_PANE
