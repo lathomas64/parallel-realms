@@ -19,6 +19,6 @@ RandomSkeletalKnight:
 RandomElectricSheep:
   MobType: StaticallyChargedSheep
   Worlds: world 
-  Chance: 0.01
+  Chance: 0.008
   Priority: 1
   Action: REPLACE
